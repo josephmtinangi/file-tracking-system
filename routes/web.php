@@ -20,6 +20,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index');
 
 Route::resource('users', 'UserController');
+Route::post('/users/attachRole', 'UserController@attachRole');
 
 Route::resource('roles', 'RoleController');
 Route::resource('permissions', 'PermissionController');
