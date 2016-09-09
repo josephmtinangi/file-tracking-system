@@ -23,4 +23,6 @@ Route::resource('users', 'UserController');
 Route::post('/users/attachRole', 'UserController@attachRole');
 
 Route::resource('roles', 'RoleController');
+Route::post('/roles/attachPermission', 'RoleController@attachPermission');
+
 Route::resource('permissions', 'PermissionController');

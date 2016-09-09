@@ -41,7 +41,9 @@
                                                 <tr>
                                                     <td>{{ $role->id }}</td>
                                                     <td>{{ $role->name }}</td>
-                                                    <td>{{ $role->display_name }}</td>
+                                                    <td>
+                                                        <a href="{{ url('roles/' . $role->id) }}">{{ $role->display_name }}</a>
+                                                    </td>
                                                     <td>{{ $role->description }}</td>
                                                     <td>{{ $role->created_at }}</td>
                                                     <td>{{ $role->updated_at }}</td>

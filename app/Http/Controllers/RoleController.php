@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\CreateRoleRequest;
+use App\Permission;
 use App\Role;
 use Illuminate\Http\Request;
 
@@ -56,7 +57,10 @@ class RoleController extends Controller
      */
     public function show($id)
     {
-        return view('roles.show');
+        $role = Role::findOrFail($id);
+        $permissions = Permission::getRolePermissions($role->id);
+        $new_permissions = Permission::getNewPermissions($role->id);
+        return view('roles.show', compact('role', 'permissions', 'new_permissions'));
     }
 
     /**
@@ -92,4 +96,15 @@ class RoleController extends Controller
     {
         //
     }
+
+    public function attachPermission(Request $request)
+    {
+        $role = Role::findOrFail($request->input('role_id'));
+        $permission = Permission::findOrFail($request->input('permission_id'));
+
+        $role->attachPermission($permission);
+
+        return redirect('roles');
+    }
+
 }

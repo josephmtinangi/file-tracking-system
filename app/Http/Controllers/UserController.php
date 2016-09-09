@@ -52,8 +52,8 @@ class UserController extends Controller
     public function show($id)
     {
         $user = User::findOrFail($id);
-        $roles = User::getUserRoles($user->id);
-        $new_roles = User::getNewRules($user->id);
+        $roles = Role::getUserRoles($user->id);
+        $new_roles = Role::getNewRules($user->id);
         return view('users.show', compact('user', 'roles', 'new_roles'));
     }
 
