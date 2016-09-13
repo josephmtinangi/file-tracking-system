@@ -1,17 +1,26 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">Dashboard</div>
 
-                <div class="panel-body">
-                    You are logged in!
+    <div class="container-fluid">
+
+        <div class="row">
+            <!-- uncomment code for absolute positioning tweek see top comment in css -->
+            <!-- <div class="absolute-wrapper"> </div> -->
+            <!-- Menu -->
+
+            @include('common.side_menu')
+
+            <!-- Main Content -->
+            <div class="container-fluid">
+                <div class="side-body">
+
+                    <h1> Main Content here </h1>
+
                 </div>
             </div>
         </div>
+
     </div>
-</div>
+
 @endsection
