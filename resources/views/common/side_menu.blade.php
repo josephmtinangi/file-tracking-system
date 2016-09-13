@@ -64,7 +64,7 @@
                         </div>
                     </div>
                 </li>
-                <li><a href="#"><span class="glyphicon glyphicon-scale"></span> Appeal</a></li>
+                <li><a href="{{ url('/appeals') }}"><span class="glyphicon glyphicon-scale"></span> Appeals</a></li>
                 <!-- //Student -->
 
                 <li class="divider">Staff</li>

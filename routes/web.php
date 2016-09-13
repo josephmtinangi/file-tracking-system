@@ -26,3 +26,10 @@ $router->group([
     Route::get('/postpone/studies', 'StudyController@index');
 });
 
+$router->group([
+    'middleware' => 'auth'
+], function() {
+    Route::get('/appeals', 'AppealController@index');
+    Route::get('/appeals/new', 'AppealController@create');
+});
+
