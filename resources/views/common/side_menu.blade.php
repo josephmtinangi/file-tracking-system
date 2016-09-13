@@ -14,26 +14,9 @@
 
                 <!-- Brand -->
                 <div class="brand-name-wrapper">
-                    <a class="navbar-brand" href="#">
-                        Brand
+                    <a class="navbar-brand" href="{{ url('/home') }}">
+                        FTS
                     </a>
-                </div>
-
-                <!-- Search -->
-                <a data-toggle="collapse" href="#search" class="btn btn-default" id="search-trigger">
-                    <span class="glyphicon glyphicon-search"></span>
-                </a>
-
-                <!-- Search body -->
-                <div id="search" class="panel-collapse collapse">
-                    <div class="panel-body">
-                        <form class="navbar-form" role="search">
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Search">
-                            </div>
-                            <button type="submit" class="btn btn-default "><span class="glyphicon glyphicon-ok"></span></button>
-                        </form>
-                    </div>
                 </div>
             </div>
 
@@ -43,45 +26,85 @@
         <div class="side-menu-container">
             <ul class="nav navbar-nav">
 
-                <li><a href="#"><span class="glyphicon glyphicon-send"></span> Link</a></li>
-                <li class="active"><a href="#"><span class="glyphicon glyphicon-plane"></span> Active Link</a></li>
-                <li><a href="#"><span class="glyphicon glyphicon-cloud"></span> Link</a></li>
+                <!-- Principal -->
+                <li class="divider">Principal</li>
+                <!-- //Principal -->
 
+                <!-- Dean of School -->
+                <li class="divider">Dean of School</li>
+                <!-- //Dean of School -->
+
+                <!-- Head of department -->
+                <li class="divider">Head of department</li>
+                <!-- //Head of department -->
+
+                <!-- Dean of Students -->
+                <li class="divider">Dean of Students</li>
+                <!-- //Dean of Students -->
+
+                <!-- Medical officer -->
+                <li class="divider">Medical officer</li>
+                <!-- //Medical officer -->
+
+                <!-- Student -->
+                <li class="divider">Student</li>
                 <!-- Dropdown-->
                 <li class="panel panel-default" id="dropdown">
-                    <a data-toggle="collapse" href="#dropdown-lvl1">
-                        <span class="glyphicon glyphicon-user"></span> Sub Level <span class="caret"></span>
+                    <a data-toggle="collapse" href="#dropdown-postpone">
+                        <span class="glyphicon glyphicon-flag"></span> Postpone <span class="caret"></span>
                     </a>
 
                     <!-- Dropdown level 1 -->
-                    <div id="dropdown-lvl1" class="panel-collapse collapse">
+                    <div id="dropdown-postpone" class="panel-collapse collapse">
                         <div class="panel-body">
                             <ul class="nav navbar-nav">
-                                <li><a href="#">Link</a></li>
-                                <li><a href="#">Link</a></li>
-                                <li><a href="#">Link</a></li>
-
-                                <!-- Dropdown level 2 -->
-                                <li class="panel panel-default" id="dropdown">
-                                    <a data-toggle="collapse" href="#dropdown-lvl2">
-                                        <span class="glyphicon glyphicon-off"></span> Sub Level <span class="caret"></span>
-                                    </a>
-                                    <div id="dropdown-lvl2" class="panel-collapse collapse">
-                                        <div class="panel-body">
-                                            <ul class="nav navbar-nav">
-                                                <li><a href="#">Link</a></li>
-                                                <li><a href="#">Link</a></li>
-                                                <li><a href="#">Link</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </li>
+                                <li><a href="#">Exams</a></li>
+                                <li><a href="#">Studies</a></li>
                             </ul>
                         </div>
                     </div>
                 </li>
+                <li><a href="#"><span class="glyphicon glyphicon-scale"></span> Appeal</a></li>
+                <!-- //Student -->
 
-                <li><a href="#"><span class="glyphicon glyphicon-signal"></span> Link</a></li>
+                <li class="divider">Staff</li>
+                <!-- Dropdown-->
+                <li class="panel panel-default" id="dropdown">
+                    <a data-toggle="collapse" href="#dropdown-postpones">
+                        <span class="glyphicon glyphicon-flag"></span> Postpones <span class="caret"></span>
+                    </a>
+
+                    <!-- Dropdown level 1 -->
+                    <div id="dropdown-postpones" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <ul class="nav navbar-nav">
+                                <li><a href="#">All</a></li>
+                                <li><a href="#">Processed</a></li>
+                                <li><a href="#">Unprocessed</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <!-- Dropdown-->
+                <li class="panel panel-default" id="dropdown">
+                    <a data-toggle="collapse" href="#dropdown-appeals">
+                        <span class="glyphicon glyphicon-flag"></span> Appeals <span class="caret"></span>
+                    </a>
+
+                    <!-- Dropdown level 1 -->
+                    <div id="dropdown-appeals" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <ul class="nav navbar-nav">
+                                <li><a href="#">All</a></li>
+                                <li><a href="#">Processed</a></li>
+                                <li><a href="#">Unprocessed</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <!-- Common -->
+                <li><a href="#">Logout</a></li>
+                <!-- //Common -->
 
             </ul>
         </div><!-- /.navbar-collapse -->

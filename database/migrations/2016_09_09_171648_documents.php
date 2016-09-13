@@ -13,15 +13,12 @@ class Documents extends Migration
      */
     public function up()
     {
-         Schema::create('documents', function (Blueprint $table) {
+        Schema::create('documents', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('reason');
-            $table->integer('document_title_id')->unsigned();
             $table->integer('student_id')->unsigned();
-            $table->foreign('document_title_id')->references('id')
-            ->on('document_titles')->onUpdate('cascade');
             $table->foreign('student_id')->references('id')
-            ->on('users')->onUpdate('cascade'); 
+                ->on('users')->onUpdate('cascade');
+            $table->text('comments');
             $table->timestamps();
         });
     }
