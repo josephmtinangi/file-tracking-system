@@ -58,9 +58,8 @@
                     <div id="dropdown-postpone" class="panel-collapse collapse">
                         <div class="panel-body">
                             <ul class="nav navbar-nav">
-                                <li @if(Request::is('postpone/exams')) class="active" @endif><a
-                                            href="{{ url('/postpone/exams') }}">Exams</a></li>
-                                <li><a href="#">Studies</a></li>
+                                <li @if(Request::is('postpone/exams')) class="active" @endif><a href="{{ url('/postpone/exams') }}"><i class="fa fa-pencil"></i> Exams</a></li>
+                                <li @if(Request::is('postpone/studies')) class="active" @endif><a href="{{ url('/postpone/studies') }}"><i class="fa fa-book"></i> Studies</a></li>
                             </ul>
                         </div>
                     </div>

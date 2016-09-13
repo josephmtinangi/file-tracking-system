@@ -23,5 +23,6 @@ $router->group([
     'namespace' => 'Postpone'
 ], function() {
     Route::get('/postpone/exams', 'ExamController@index');
+    Route::get('/postpone/studies', 'StudyController@index');
 });
 
