@@ -15,6 +15,8 @@
             <div class="container-fluid">
                 <div class="side-body">
 
+                    <h1>Postpone Exam</h1>
+
                 </div>
             </div>
         </div>

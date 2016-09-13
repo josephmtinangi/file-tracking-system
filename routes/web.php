@@ -15,6 +15,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes();
+//Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+
+$router->group([
+    'namespace' => 'Postpone'
+], function() {
+    Route::get('/postpone/exams', 'ExamController@index');
+});
+
