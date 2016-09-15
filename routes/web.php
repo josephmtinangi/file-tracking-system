@@ -21,16 +21,18 @@ Route::get('/home', 'HomeController@index');
 
 $router->group([
     'namespace' => 'Postpone'
-], function() {
+], function () {
     Route::get('/postpone/exams', 'ExamController@index');
     Route::get('/postpone/exams/create', 'ExamController@create');
     Route::post('/postpone/exams', 'ExamController@store');
     Route::get('/postpone/studies', 'StudyController@index');
 });
 
+Route::resource('permissions', 'PermissionController');
+
 $router->group([
     'middleware' => 'auth'
-], function() {
+], function () {
     Route::get('/appeals', 'AppealController@index');
     Route::get('/appeals/new', 'AppealController@create');
 });

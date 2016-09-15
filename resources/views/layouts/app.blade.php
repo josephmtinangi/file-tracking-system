@@ -14,7 +14,6 @@
     <link href="/css/font-awesome.css" rel="stylesheet">
     <link href="/css/bootstrap.css" rel="stylesheet">
     <link href="/css/app.css" rel="stylesheet">
-
     <!-- Scripts -->
     <script>
         window.Laravel = <?php echo json_encode([
