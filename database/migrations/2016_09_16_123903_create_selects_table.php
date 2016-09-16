@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Attachments extends Migration
+class CreateSelectsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,9 @@ class Attachments extends Migration
      */
     public function up()
     {
-        Schema::create('attachments', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('name');
-            $table->string('description');
-            $table->integer('document_id')->unsigned();
-            $table->foreign('document_id')->references('id')
-            ->on('documents')->onUpdate('cascade');
+        Schema::create('selections', function (Blueprint $table) {
+            $table->increments('sid');
+            $table->string('sname');
             $table->timestamps();
         });
     }
@@ -31,6 +27,6 @@ class Attachments extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('selections');
     }
 }

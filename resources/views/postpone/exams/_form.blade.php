@@ -11,12 +11,6 @@
     </div>
 </div>
 
-<div class="form-group">
-    <label for="ref" class="col-sm-3 control-label">Request title:</label>
-    <div class="col-sm-4">
-        <input type="text" name="ref" id="ref" class="form-control" placeholder="REQUEST FOR POSTPONING EXAMS">
-    </div>
-</div>
 {{-- this is for course selection --}}
 <div class="form-group">
     <label for="course" class="col-sm-3 control-label">Course</label>

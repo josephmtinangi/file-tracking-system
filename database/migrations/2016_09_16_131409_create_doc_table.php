@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Documents extends Migration
+class CreateDocTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,17 @@ class Documents extends Migration
      */
     public function up()
     {
+
         Schema::create('documents', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('docid');
             $table->integer('student_id')->unsigned();
+            $table->integer('Assignment_id')->unsigned();
+            $table->text('reason');
+            $table->timestamps();
             $table->foreign('student_id')->references('id')
                 ->on('users')->onUpdate('cascade');
-            $table->text('comments');
-            $table->timestamps();
+            $table->foreign('Assignment_id')->references('Assid')
+                ->on('request_assignments')->onUpdate('cascade');
         });
     }
 
@@ -30,6 +34,6 @@ class Documents extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('documents');
     }
 }
