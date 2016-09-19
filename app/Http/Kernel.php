@@ -54,6 +54,10 @@ class Kernel extends HttpKernel
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'role' => \Zizaco\Entrust\Middleware\EntrustRole::class,
         'permission' => \Zizaco\Entrust\Middleware\EntrustPermission::class,
+<<<<<<< .merge_file_a04496
         'ability' => \Zizaco\Entrust\Middleware\EntrustAbility::class,
+=======
+        'ability' => \Zizaco\Entrust\Middleware\EntrustAbility::class,        
+>>>>>>> .merge_file_a04060
     ];
 }

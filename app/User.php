@@ -4,6 +4,10 @@ namespace App;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+<<<<<<< .merge_file_a06368
+=======
+use Illuminate\Support\Facades\DB;
+>>>>>>> .merge_file_a04436
 use Zizaco\Entrust\Traits\EntrustUserTrait;
 
 class User extends Authenticatable
@@ -28,4 +32,6 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+
 }

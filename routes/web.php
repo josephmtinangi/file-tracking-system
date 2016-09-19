@@ -19,6 +19,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 
+<<<<<<< .merge_file_a04196
 $router->group([
     'namespace' => 'Postpone'
 ], function () {
@@ -37,3 +38,12 @@ $router->group([
     Route::get('/appeals/new', 'AppealController@create');
 });
 
+=======
+Route::resource('users', 'UserController');
+Route::post('/users/attachRole', 'UserController@attachRole');
+
+Route::resource('roles', 'RoleController');
+Route::post('/roles/attachPermission', 'RoleController@attachPermission');
+
+Route::resource('permissions', 'PermissionController');
+>>>>>>> .merge_file_a06028
