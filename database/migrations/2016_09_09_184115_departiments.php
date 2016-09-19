@@ -17,7 +17,7 @@ class Departiments extends Migration
             $table->increments('id');
             $table->string('name');
             $table->string('code');
-            $table->string('description');
+            $table->string('description')->nullable();
             $table->integer('school_id')->unsigned();
             $table->foreign('school_id')->references('id') ->on('schools')->onUpdate('cascade');
             $table->timestamps();

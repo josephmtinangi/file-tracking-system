@@ -3,18 +3,14 @@
     <div class="col-sm-4">
         <select name="type_of_exam" id="type_of_exam" class="form-control">
             <option value="">-Select-</option>
-            <option value="">Quiz</option>
+            <option value="">University Exams</option>
+            <option value="">Suplimentary Exams</option>
+            <option value="">Special Exams</option>
             <option value="">Test</option>
         </select>
     </div>
 </div>
 
-<div class="form-group">
-    <label for="ref" class="col-sm-3 control-label">REF:</label>
-    <div class="col-sm-4">
-        <input type="text" name="ref" id="ref" class="form-control" placeholder="REQUEST FOR POSTPONING EXAMS">
-    </div>
-</div>
 {{-- this is for course selection --}}
 <div class="form-group">
     <label for="course" class="col-sm-3 control-label">Course</label>

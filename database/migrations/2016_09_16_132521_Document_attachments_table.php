@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Colleges extends Migration
+class DocumentAttachmentsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,13 @@ class Colleges extends Migration
      */
     public function up()
     {
-         Schema::create('colleges', function (Blueprint $table) {
+        Schema::create('attachments', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name')->unique();
-            $table->string('description')->nullable();
+            $table->string('title');
+            $table->string('contents');
+            $table->integer('document_id')->unsigned();
+            $table->foreign('document_id')->references('docid')
+                ->on('documents')->onUpdate('cascade');
             $table->timestamps();
         });
     }
@@ -28,6 +31,6 @@ class Colleges extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('attachments');
     }
 }

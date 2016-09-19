@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Colleges extends Migration
+class CreateRequestsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,9 @@ class Colleges extends Migration
      */
     public function up()
     {
-         Schema::create('colleges', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('name')->unique();
-            $table->string('description')->nullable();
+        Schema::create('requests', function (Blueprint $table) {
+            $table->increments('rid');
+            $table->string('rname');
             $table->timestamps();
         });
     }
@@ -28,6 +27,6 @@ class Colleges extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('requests');
     }
 }

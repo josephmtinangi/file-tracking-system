@@ -16,7 +16,7 @@ class Schools extends Migration
         Schema::create('schools', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->string('description');
+            $table->string('description')->nullable();
             $table->integer('college_id')->unsigned();
             $table->foreign('college_id')->references('id')-> on('colleges')->onupdate('cascade');
             $table->timestamps();

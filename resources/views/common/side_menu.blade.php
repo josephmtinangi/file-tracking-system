@@ -48,7 +48,7 @@
 
                 <!-- Student -->
                 <li class="divider">Student</li>
-                <!-- Dropdown-->
+                <li><a href="{{ url('/permissions') }}"><i class="fa fa-cab"></i> Permission</a></li>
                 <li class="panel panel-default" id="dropdown">
                     <a data-toggle="collapse" href="#dropdown-postpone">
                         <span class="glyphicon glyphicon-flag"></span> Postpone <span class="caret"></span>
@@ -102,6 +102,7 @@
                         </div>
                     </div>
                 </li>
+
                 <!-- Common -->
                 <li><a href="#">Logout</a></li>
                 <!-- //Common -->

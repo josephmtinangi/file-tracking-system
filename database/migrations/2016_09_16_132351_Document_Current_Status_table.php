@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class DocumentsCurrentStatus extends Migration
+class DocumentCurrentStatusTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,14 @@ class DocumentsCurrentStatus extends Migration
      */
     public function up()
     {
-         Schema::create('Document_Current_Status', function (Blueprint $table) {
+        Schema::create('Document_Current_Status', function (Blueprint $table) {
             $table->increments('id');
             $table->string('status');
-            $table->string('comment');
             $table->integer('document_id')->unsigned();
             $table->integer('staff_id')->unsigned();
             $table->foreign('staff_id')->references('id')->on('users')
-            ->onUpdate('cascade');
-        $table->foreign('document_id')->references('id') ->on('documents')->onUpdate('cascade');
+                ->onUpdate('cascade');
+            $table->foreign('document_id')->references('docid') ->on('documents')->onUpdate('cascade');
             $table->timestamps();
         });
     }
@@ -33,6 +32,6 @@ class DocumentsCurrentStatus extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('Document_Current_Status');
     }
 }
