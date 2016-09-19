@@ -13,22 +13,34 @@ class CollegesTableSeeder extends Seeder
     public function run()
     {
         DB::table('colleges')->insert([
-            'name' => 'College of Informatics and Virtual Education'
+            'name' => 'College of Informatics and Virtual Education',
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now()
         ]);
         DB::table('colleges')->insert([
-            'name' => 'College of Humanities and Social Sciences'
+            'name' => 'College of Humanities and Social Sciences',
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now()
         ]);
         DB::table('colleges')->insert([
-            'name' => 'College of Earth Sciences'
+            'name' => 'College of Earth Sciences',
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now()
         ]);
         DB::table('colleges')->insert([
-            'name' => 'College of Education'
+            'name' => 'College of Education',
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now()
         ]);
         DB::table('colleges')->insert([
-            'name' => 'College of Health and Allied Sciences'
+            'name' => 'College of Health and Allied Sciences',
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now()
         ]);
         DB::table('colleges')->insert([
-            'name' => 'College of Mathematics and Natural Sciences'
+            'name' => 'College of Mathematics and Natural Sciences',
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now()
         ]);
     }
 }
