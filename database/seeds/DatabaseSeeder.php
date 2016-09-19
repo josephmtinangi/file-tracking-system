@@ -13,6 +13,10 @@ class DatabaseSeeder extends Seeder
     {
         $users = factory(App\User::class, 20)->create();
         $this->call(CollegesTableSeeder::class);
+<<<<<<< HEAD
         $this->call(ProgramTableSeeder::class);
+=======
+        $this->call(SchoolsTableSeeder::class);
+>>>>>>> 83320f23c6070e4632c514ba7404ce398f273209
     }
 }

@@ -37,3 +37,10 @@ $router->group([
     Route::get('/appeals/new', 'AppealController@create');
 });
 
+$router->group([
+    'middleware' => 'auth',
+    'namespace' => 'SuperAdmin'
+], function () {
+    Route::resource('/super-admin/roles', 'RoleController');
+});
+
