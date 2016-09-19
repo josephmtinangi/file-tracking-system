@@ -12,10 +12,36 @@
             @include('common.side_menu')
 
                     <!-- Main Content -->
-            <div class="container-fluid">
+            <div class="container">
                 <div class="side-body">
+                    <div class="row">
+                        <br>
+                        <a href="#" class="btn btn-primary pull-right">New</a>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="panel-default">
+                            <div class="panel-heading">
+                                <h3 class="panel-title">All Postponeds</h3>
+                            </div>
+                        </div>
+                        <div class="panel-body">
+                            <table class="table table-stripped">
+                                <theader>
+                                    <th>ID</th>
+                                    <th> Exam type</th>
+                                    <th> Course</th>
+                                    <th> Reason</th>
+                                    <th> Attachment</th>
+                                </theader>
+                                <tbody>
 
-                    <h1>Postpone Exam</h1>
+                                </tbody>
+
+                            </table>
+
+                        </div>
+                    </div>
 
                 </div>
             </div>

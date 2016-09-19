@@ -1,7 +1,7 @@
 <div class="form-group{{ $errors->has('permission_type') ? ' has-error' : '' }}">
     {!! Form::label('permission_type', 'Permission Type', ['class' => 'col-sm-2 control-label']) !!}
     <div class="col-sm-3">
-        <select name="permission_type" id="permission_type" class="form-control">
+        <select name="permission_title" id="permission_title" class="form-control">
             <option value="">-Select-</option>
             <option value="">Type 1</option>
             <option value="">Type 2</option>
