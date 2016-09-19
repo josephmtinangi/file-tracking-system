@@ -42,5 +42,6 @@ $router->group([
     'namespace' => 'SuperAdmin'
 ], function () {
     Route::resource('/super-admin/roles', 'RoleController');
+    Route::resource('/super-admin/permissions', 'PermissionController');
 });
 
