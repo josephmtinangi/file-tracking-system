@@ -18,9 +18,9 @@ class CreateProgramsTable extends Migration
             $table->string('name');
             $table->string('code');
             $table->integer('duration');
-            $table->integer('depatiment_id')->unsigned();
-            $table->foreign('depatiment_id')->references('id')-> 
-            on('departiments')->onUpdate('cascade');
+            $table->integer('department_id')->unsigned();
+            $table->foreign('department_id')->references('id')->
+            on('departments')->onUpdate('cascade');
             $table->timestamps();
              });
     }

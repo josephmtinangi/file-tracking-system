@@ -13,7 +13,7 @@ class Departiments extends Migration
      */
     public function up()
     {
-         Schema::create('departiments', function (Blueprint $table) {
+         Schema::create('departments', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
             $table->string('code');

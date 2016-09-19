@@ -9,9 +9,9 @@ class Program extends Model
     protected $fillable=['name,code,duration'];
 
     public function departments(){
-        return $this->belongsTo(department::class);
+        return $this->belongsTo(Department::class);
     }
     public function courses(){
-        return $this->hasMany(course::class);
+        return $this->hasMany(Course::class);
     }
 }
