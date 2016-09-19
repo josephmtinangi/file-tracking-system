@@ -10,6 +10,8 @@ class program extends Model
 
     public function departments(){
         return $this->belongsTo(department::class);
+    }
+    public function courses(){
         return $this->hasMany(course::class);
     }
 }
