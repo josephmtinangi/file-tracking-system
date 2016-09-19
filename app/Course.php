@@ -14,6 +14,6 @@ class Course extends Model
 
     public function program()
     {
-        return $this->belongsTo(Course::class);
+        return $this->belongsTo(Program::class);
     }
 }
