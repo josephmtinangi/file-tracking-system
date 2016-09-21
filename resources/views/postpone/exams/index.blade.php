@@ -16,7 +16,7 @@
                 <div class="side-body">
                     <div class="row">
                         <br>
-                        <a href="#" class="btn btn-primary pull-right">New</a>
+                        <a href="{{url('/postpone/exams/create')}}" class="btn btn-primary pull-right">New</a>
                     </div>
                     <br>
                     <div class="row">

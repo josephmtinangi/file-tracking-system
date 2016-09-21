@@ -13,14 +13,18 @@
 
 {{-- this is for course selection --}}
 <div class="form-group">
-    <label for="course" class="col-sm-3 control-label">Course</label>
-    <div class="col-sm-4">
-        <select name="course" id="course" class="form-control">
-            <option value="">-Select-</option>
-            <option value="">TN321</option>
-            <option value="">CS320</option>
-        </select>
-    </div>
+    <p><strong>Select course</strong></p>
+    <table class="table table-striped">
+        <thead>
+        <th>Code</th>
+        <th>Name</th>
+        <th>Credit</th>
+        <th>Select</th>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
 </div>
 {{-- //this is for course selection --}}
 
