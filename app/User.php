@@ -6,9 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class User extends Model
 {
-<<<<<<< HEAD
-    //
-=======
     use EntrustUserTrait;
     use Notifiable;
 
@@ -29,12 +26,9 @@ class User extends Model
     protected $hidden = [
         'password', 'remember_token',
     ];
-    
-    public function roles(){
+
+    public function roles()
+    {
         return $this->belongsTo('role');
     }
-<<<<<<< HEAD
->>>>>>> 5a9449c2c67c4f3a05841debb61500f4feda943d
-=======
->>>>>>> 5a9449c2c67c4f3a05841debb61500f4feda943d
 }
