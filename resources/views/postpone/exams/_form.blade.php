@@ -17,6 +17,7 @@
 
 {{-- this is for course selection --}}
 <div class="form-group">
+<<<<<<< HEAD
    <label for="courses" class="col-sm-3">Select courses</label>
     <div class="col-sm-4">
         <table class="table table-striped courses" id="courses">
@@ -31,6 +32,20 @@
             </tbody>
         </table>
     </div>
+=======
+    <p><strong>Select course</strong></p>
+    <table class="table table-striped">
+        <thead>
+        <th>Code</th>
+        <th>Name</th>
+        <th>Credit</th>
+        <th>Select</th>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+>>>>>>> 5a9449c2c67c4f3a05841debb61500f4feda943d
 </div>
 {{-- //this is for course selection --}}
 
