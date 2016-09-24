@@ -25,6 +25,7 @@ $router->group([
     Route::get('/postpone/exams', 'ExamController@index');
     Route::get('/postpone/exams/create', 'ExamController@create');
     Route::post('/postpone/exams', 'ExamController@store');
+    Route::post('/postpone/exams/create', 'ExamController@create');
     Route::get('/postpone/studies', 'StudyController@index');
 });
 
