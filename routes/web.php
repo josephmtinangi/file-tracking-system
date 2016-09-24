@@ -18,3 +18,31 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+
+$router->group([
+    'namespace' => 'Postpone'
+], function () {
+    Route::get('/postpone/exams', 'ExamController@index');
+    Route::get('/postpone/exams/create', 'ExamController@create');
+    Route::post('/postpone/exams', 'ExamController@store');
+    Route::post('/postpone/exams/create', 'ExamController@create');
+    Route::get('/postpone/studies', 'StudyController@index');
+});
+
+Route::resource('permissions', 'PermissionController');
+
+$router->group([
+    'middleware' => 'auth'
+], function () {
+    Route::get('/appeals', 'AppealController@index');
+    Route::get('/appeals/new', 'AppealController@create');
+});
+
+$router->group([
+    'middleware' => 'auth',
+    'namespace' => 'SuperAdmin'
+], function () {
+    Route::resource('/super-admin/roles', 'RoleController');
+    Route::resource('/super-admin/permissions', 'PermissionController');
+});
+
