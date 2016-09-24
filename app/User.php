@@ -33,5 +33,8 @@ class User extends Model
     public function roles(){
         return $this->belongsTo('role');
     }
+<<<<<<< HEAD
+>>>>>>> 5a9449c2c67c4f3a05841debb61500f4feda943d
+=======
 >>>>>>> 5a9449c2c67c4f3a05841debb61500f4feda943d
 }
