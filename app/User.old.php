@@ -2,13 +2,12 @@
 
 namespace App;
 
-use Illuminate\Database\Eloquent\Model;
+use Illuminate\Notifications\Notifiable;
+use Illuminate\Foundation\Auth\User as Authenticatable;
+use Zizaco\Entrust\Traits\EntrustUserTrait;
 
-class User extends Model
+class User extends Authenticatable
 {
-<<<<<<< HEAD
-    //
-=======
     use EntrustUserTrait;
     use Notifiable;
 
@@ -33,8 +32,7 @@ class User extends Model
     public function roles(){
         return $this->belongsTo('role');
     }
-<<<<<<< HEAD
->>>>>>> 5a9449c2c67c4f3a05841debb61500f4feda943d
-=======
->>>>>>> 5a9449c2c67c4f3a05841debb61500f4feda943d
+    public function programs(){
+        return $this->belongsTo('program');
+    }
 }

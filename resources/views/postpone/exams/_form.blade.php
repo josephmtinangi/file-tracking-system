@@ -1,3 +1,7 @@
+<style type="text/css">
+
+}
+</style>
 <div class="form-group">
     <label for="type_of_exam" class="col-sm-3 control-label">Type of Exam</label>
     <div class="col-sm-4">
@@ -13,6 +17,25 @@
 
 {{-- this is for course selection --}}
 <div class="form-group">
+<<<<<<< HEAD
+<<<<<<< HEAD
+   <label for="courses" class="col-sm-3">Select courses</label>
+    <div class="col-sm-4">
+        <table class="table table-striped courses" id="courses">
+            <thead>
+            <th>Code</th>
+            <th>Name</th>
+            <th>Credit</th>
+            <th>Select</th>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </div>
+=======
+=======
+>>>>>>> 5a9449c2c67c4f3a05841debb61500f4feda943d
     <p><strong>Select course</strong></p>
     <table class="table table-striped">
         <thead>
@@ -25,21 +48,16 @@
 
         </tbody>
     </table>
+<<<<<<< HEAD
+>>>>>>> 5a9449c2c67c4f3a05841debb61500f4feda943d
+=======
+>>>>>>> 5a9449c2c67c4f3a05841debb61500f4feda943d
 </div>
 {{-- //this is for course selection --}}
 
 
 {{-- this is for year selection --}}
 <div class="form-group">
-    <label for="academic_year" class="col-sm-3 control-label">Academic Year</label>
-    <div class="col-sm-4">
-        <select name="academic_year" id="academic_year" class="form-control">
-            <option value="">-Select-</option>
-            <option value="">2013/2014</option>
-            <option value="">2015/2016</option>
-        </select>
-    </div>
-</div>
 {{-- //this is for year selection --}}
 
 
