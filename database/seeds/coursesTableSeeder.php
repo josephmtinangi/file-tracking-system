@@ -1,9 +1,8 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\DB;
-
-class CoursesTableSeeder extends Seeder
+use Carbon\Carbon;
+class coursesTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -12,6 +11,7 @@ class CoursesTableSeeder extends Seeder
      */
     public function run()
     {
+
         DB::table('courses')->insert([
             'name' => 'Introduction to High Level Programming',
             'code' => 'CS 110',
@@ -24,6 +24,8 @@ class CoursesTableSeeder extends Seeder
             'code' => 'TN 123',
             'program_id' => 3,
             'credit' => 10,
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now()
         ]);
 
         DB::table('courses')->insert([
@@ -31,6 +33,8 @@ class CoursesTableSeeder extends Seeder
             'code' => 'CS 312',
             'program_id' => 3,
             'credit' => 10,
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now()
         ]);
 
         DB::table('courses')->insert([
@@ -38,6 +42,8 @@ class CoursesTableSeeder extends Seeder
             'code' => 'CS 221',
             'program_id' => 3,
             'credit' => 10,
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now()
         ]);
     }
 }

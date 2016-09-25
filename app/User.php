@@ -6,8 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class User extends Model
 {
-    use EntrustUserTrait;
-    use Notifiable;
 
     /**
      * The attributes that are mass assignable.

@@ -1,8 +1,8 @@
 <?php
 
 use Illuminate\Database\Seeder;
-
-class DepartmentTableSeeder extends Seeder
+use Carbon\Carbon;
+class departmentsTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -12,20 +12,25 @@ class DepartmentTableSeeder extends Seeder
     public function run()
     {
         DB::table('Departments')->insert([
-           'name' =>'Computer Science',
+            'name' =>'Computer Science',
             'code' =>'CS',
             'school_id'=> 1
+            , 'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now()
         ]);
         DB::table('Departments')->insert([
             'name' =>'Telecomunation Engineering',
             'code' =>'TE',
-            'school_id'=>2
+            'school_id'=>2,
+             'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now()
         ]);
         DB::table('Departments')->insert([
             'name' =>'Software Engineering',
             'code' =>'SE',
-            'school_id'=> 2
+            'school_id'=> 2,
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now()
         ]);
-
     }
 }

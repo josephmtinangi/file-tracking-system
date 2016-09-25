@@ -1,0 +1,42 @@
+<?php
+
+use Illuminate\Database\Seeder;
+use Carbon\Carbon;
+class program_coursesTableSeeder extends Seeder
+{
+    /**
+     * Run the database seeds.
+     *
+     * @return void
+     */
+    public function run()
+    {
+        DB::table('program_courses')->insert([
+            'program_id' => 3,
+            'course_id' => 2,
+             'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now()
+        ]);
+
+        DB::table('Program_courses')->insert([
+            'program_id' => 4,
+            'course_id' => 2,
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now()
+        ]);
+
+        DB::table('Program_courses')->insert([
+            'program_id' => 5,
+            'course_id' => 2,
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now()
+        ]);
+
+        DB::table('Program_courses')->insert([
+            'program_id' => 6,
+            'course_id' => 2,
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now()
+        ]);
+    }
+}

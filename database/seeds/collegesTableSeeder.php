@@ -1,10 +1,8 @@
 <?php
 
-use Carbon\Carbon;
 use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\DB;
-
-class CollegesTableSeeder extends Seeder
+use Carbon\Carbon;
+class collegesTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -13,6 +11,7 @@ class CollegesTableSeeder extends Seeder
      */
     public function run()
     {
+
         DB::table('colleges')->insert([
             'name' => 'College of Informatics and Virtual Education',
             'created_at' => Carbon::now(),

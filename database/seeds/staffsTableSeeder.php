@@ -1,8 +1,8 @@
 <?php
 
 use Illuminate\Database\Seeder;
-
-class Users extends Seeder
+use Carbon\Carbon;
+class staffsTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
